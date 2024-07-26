@@ -4,7 +4,16 @@
 package simulacro;
 
 public class App {
-    public static void main(String[] args) {
+     public static void main(String[] args) {
+        try {
+            System.out.println(Convertir_min_sec(300));
+          
+            System.out.println(Validar_iguales((short)30,(short)20));
+            
+            System.out.println(Calcular_potencia((short)30,(byte)20));
+        } catch (Exception e) {
+            // TODO: handle exception
+        }
 
     }
 
