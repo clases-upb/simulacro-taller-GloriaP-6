@@ -4,7 +4,16 @@
 package simulacro;
 
 public class App {
-    public static void main(String[] args) {
+     public static void main(String[] args) {
+        try {
+            System.out.println(Convertir_min_sec(300));
+          
+            System.out.println(Validar_iguales((short)30,(short)20));
+            
+            System.out.println(Calcular_potencia((short)30,(byte)20));
+        } catch (Exception e) {
+            // TODO: handle exception
+        }
 
     }
 
@@ -14,6 +23,18 @@ public class App {
      * y devuelve en entero, los segundos equivalentes. Si hay un error, devuelve -1. 
      *  Adaptado de edabit
      */
+        public static int Convertir_min_sec (int minutos) {
+
+        try {
+            int tot_segundos = 0;
+            final byte seg_por_min= 60;
+            tot_segundos = minutos * seg_por_min;
+            return tot_segundos;
+        } catch (Exception e) {
+            // Se colocan los errores para que aparezca lo que pongamos en erta seccion
+            return -1;
+        }
+    }
     
 
 
@@ -23,7 +44,23 @@ public class App {
      *  Adaptado de edabit
      */
 
+public static boolean Validar_iguales(short a, short b ) {
+         
+           try {
+            boolean Son_iguales = false;
+            if (b==a) 
+            Son_iguales = true;
+        
+            else
+            Son_iguales = false;
 
+            return Son_iguales;
+
+           } catch (Exception e) {
+            return false;
+           }
+            
+        }
 
     /*
      * 3. Diseña el algoritmo y programa la función Calcular_potencia que recibe en un short el voltaje y en 
@@ -31,7 +68,19 @@ public class App {
      * Si hay un error, devuelve 0.
      *  Adaptado de edabit
      */
+public static float Calcular_potencia (short Voltaje , byte Corriente ) {
 
+  try {
+    float Potencia = 0;
+    Potencia = Voltaje * Corriente;
+    return Potencia;
+
+  } catch (Exception e) {
+    // TODO: handle exception
+    return 0;
+  }
+    
+}
 
 
 }
